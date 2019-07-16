@@ -23,10 +23,12 @@
 #define _XM_VECTORCALL_ 1
 #endif
 
+#ifndef XM_CALLCONV
 #if _XM_VECTORCALL_
 #define XM_CALLCONV __vectorcall
 #else
 #define XM_CALLCONV __fastcall
+#endif
 #endif
 
 #if defined(_MSC_VER) && (_MSC_FULL_VER < 190023506)
