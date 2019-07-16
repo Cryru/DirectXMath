@@ -1554,6 +1554,16 @@
 #  define SALIERI_DEFINED_String_length
 #endif
 
+/* Other */
+
+#if defined(_Analysis_assume_) && defined(SALIERI_DEFINED_Analysis_assume_)
+#  undef _Analysis_assume_
+#endif
+#if !defined(_Analysis_assume_)
+#  define _Analysis_assume_(param)
+#  define SALIERI_DEFINED_Analysis_assume_
+#endif
+
 #if defined(SALIERI_VERSION)
 #  undef SALIERI_VERSION
 #endif
